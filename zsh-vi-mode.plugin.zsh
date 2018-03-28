@@ -39,6 +39,12 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
+# allow home and end to move to beginning/end/of line
+bindkey '\e[H' beginning-of-line
+bindkey '\e[F' end-of-line
+bindkey -M vicmd '\e[H' vi-beginning-of-line
+bindkey -M vicmd '\e[F' vi-end-of-line
+
 # delete in both insert and command mode
 bindkey '\e[3~' delete-char
 bindkey -M vicmd '\e[3~' vi-delete-char
