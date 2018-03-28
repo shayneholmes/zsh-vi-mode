@@ -39,6 +39,10 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 
+# delete in both insert and command mode
+bindkey '\e[3~' delete-char
+bindkey -M vicmd '\e[3~' vi-delete-char
+
 # if mode indicator wasn't setup by theme, define default
 if [[ "$MODE_INDICATOR" == "" ]]; then
   MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
