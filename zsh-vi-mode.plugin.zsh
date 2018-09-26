@@ -23,6 +23,10 @@ bindkey -M vicmd 'v' edit-command-line
 # 'jk' to exit insert mode
 bindkey -M viins 'jk' vi-cmd-mode
 
+# Search backwards and forwards with a pattern
+bindkey -M vicmd '/' history-incremental-pattern-search-backward
+bindkey -M vicmd '?' history-incremental-pattern-search-forward
+
 # allow ctrl-p, ctrl-n for navigate history (standard behaviour)
 bindkey '^P' up-history
 bindkey '^N' down-history
